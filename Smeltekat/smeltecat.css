@@ -10,6 +10,10 @@
     100%{background-position: -6000px;}
 }
 footer{
-    background-color: black;
+    background-color: blue;
     height: 100px;
+    color: aliceblue;
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px;
 }
