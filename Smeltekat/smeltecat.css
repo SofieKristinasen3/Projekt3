@@ -9,3 +9,7 @@
     0%{background-position: 0px;}
     100%{background-position: -6000px;}
 }
+footer{
+    background-color: black;
+    height: 100px;
+}
