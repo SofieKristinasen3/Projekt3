@@ -1,55 +1,108 @@
+/* variabler der viser min farvepallette*/
+:root{
+  --universeblack: #071E22;
+  --cloudywhite: #F9F5F0;
+  --myyellow: #EEC956;
+  --hoveryellow: #ffe189;
+}
+
+/* Gør border til en del af box størrelse, i stedet for at ligge rundt om */
+*{box-sizing: border-box;}
+
+/* Raleway er skrifttypen som bliver brugt gennem hele hjemmesiden, og er derfor sat som default her. 
+Margin og padding er også sat til 0px, for at overwrite alle default settings*/
+
 body{
   font-family: 'raleway';
   margin: 0px;
-  background-color: #071E22;
+  padding: 0px;
 }
 
+/* Hero section, layout lavet med grid */
 header{
+  background-color: var(--universeblack);
   padding: 20px;
   width: auto;
   height: auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 0.5fr;
-    grid-template-areas:
-    ". logo ."
-    "h1 . ."
-    "h2 h2 .";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1 fr 1fr;
+    grid-template-areas: 
+    "h1 logo"
+    "covertekst .";
     
 }
 .logo{
   grid-area: logo;
+  max-width: 400px;
 }
 
 h1{
   grid-area: h1;
-  color: #EEC956;
+  color: var(--myyellow);
   font-size: 96px;
   font-weight: 700;
 }
 
 .covertekst{
-  grid-area: h2;
+  grid-area: covertekst;
   font-size: 36px;
-  color: #F6F1E9;
+  color: var(--cloudywhite);
   font-weight: 400;
 }
-nav{
-  height: 50px;
-  width: auto;
-  background-color: #EEC956;
-}
 
-nav > ul{
-  list-style-type: none;
+/*menu bliver lavet med flex box*/
+.menu>ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: var(--myyellow);
+  color: var(--universeblack);
+  font-weight: 400;
+  font-size: 30px;
   margin: 0px;
+  padding: 0px;
 }
-
-
-
+.menu>ul>li{
+  margin: 0px;
+  padding: 10px 0px;
+  text-align: center;
+  width: 100%;
+}
+li:hover{
+  background-color: var(--hoveryellow);
+}
+/* Footer */
 footer {
         width: 100%;
         height: 50px;
-        background-color: #EEC956
+        background-color: var(--myyellow);
       }
-      
+
+/* Mobilversion, alt bliver lagt ind på én kolonne */
+@media only screen and (max-width: 550px){
+  header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "logo"
+    "h1"
+    "covertekst"
+    ;
+  }
+  .menu>ul{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+}
+/*  
+@media only screen and (min-width: 550px){
+  .menu>ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }*/
