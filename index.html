@@ -18,23 +18,71 @@
         alt="Logo udformet som en firkant med afrundede hjørner, med initialerne SK i midten, med neon effekt"
       />
       <h1>Dit digitale forhus</h1>
-      <h2 class="covertekst">
+      <h3 class="covertekst">
         Klar scene? Lad os skabe digitale løsninger, der virker - før tæppet går
         op.
-      </h2>
+      </h3>
     </header>
 
-    <nav class="menu">
-      <ul>
+    <nav>
+      <ul class="menu">
+        <li class="hide_on_mobile"><a href="#about">Jeg tilbyder</a></li>
+        <li class="hide_on_mobile"><a href="#projekter">Projekter</a></li>
+        <li class="hide_on_mobile"><a href="#contact">Kontakt</a></li>
+        <li class="hide_on_computer" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#071E22"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#071E22"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
         <li><a href="#about">Jeg tilbyder</a></li>
         <li><a href="#projekter">Projekter</a></li>
         <li><a href="#contact">Kontakt</a></li>
       </ul>
     </nav>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
 
     <section id="about">
+      <img
+        src="/Img/profilbillede.png"
+        alt="Profilbillede af Sofie Kristiansen"
+      />
+
       <h2>Jeg tilbyder</h2>
-      <img src="Img/Kronborg.JPG" alt="Kronborg" />
+
       <p>
         Kulturen har altid været skabt af mennesker som tør gå forrest, skabe
         nyt, eksperimentere og udfordre. <br />
@@ -52,18 +100,19 @@
 
       <div class="galleri">
         <div class="item1">
-          <a href="#modal"
-            ><img
+          <a href="#modal">
+            <img
               src="Img/folder_final.png"
               alt="Viser folder der forklarer koncept om børnebog til den fynske landsby"
-          /></a>
+            />
+          </a>
           <div id="modal">
             <p>
               Folder lavet i Adobe InDesign, til den Fynske Landsby i Odense.
               Folderen forklarer et helt nyt koncept, til en installation i
               landsbyens udstilling.
             </p>
-            <a href="#">Close the Modal</a>
+            <a href="#">Luk</a>
           </div>
         </div>
 
@@ -78,7 +127,7 @@
               Neon logo, udarbejdet til netop denne portefølje. Logoet er
               inspireret af de neonskilte der findes foran nogle teatre.
             </p>
-            <a href="#">Close the Modal</a>
+            <a href="#">Luk</a>
           </div>
         </div>
 
@@ -93,7 +142,7 @@
               En digital skitse til selve layoutet på en hjemmeside, før indhold
               og design bliver lagt ind.
             </p>
-            <a href="#">Close the Modal</a>
+            <a href="#">Luk</a>
           </div>
         </div>
         <div class="item4">
@@ -108,7 +157,7 @@
               Nordsjælland, målrettet danskere på udkig efter deres næste
               eventyr.
             </p>
-            <a href="#">Close the Modal</a>
+            <a href="#">Luk</a>
           </div>
         </div>
 
@@ -124,7 +173,7 @@
               videoformat, med mulighed for at læse mere. Nyhederne du bliver
               vist, er baseret på hvad du som bruger markerer som interesser.
             </p>
-            <a href="#">Close the Modal</a>
+            <a href="#">Luk</a>
           </div>
         </div>
 
@@ -139,7 +188,7 @@
               Illustrationer og copywriting til et helt nyt koncept, i den
               Fynske Landsby. Projektet var målrettet børn og deres voksne.
             </p>
-            <a href="#">Close the Modal</a>
+            <a href="#" class="close">Luk</a>
           </div>
         </div>
       </div>
@@ -147,18 +196,22 @@
 
     <section id="contact">
       <h2>Kontakt</h2>
-      <img src="Img/Kronborg.JPG" alt="Kronborg" />
+      <img
+        src="/Img/secondary_logo4.png"
+        alt="logo med neoneffekt med teksten Det Digitale Forhus, Sofie Kristiansen"
+      />
       <p>
         Er du klar til at skabe noget nyt? <br />Kontakt mig, og lad os tage en
         uforpligtende snak over en kop kaffe.
       </p>
-
-      <p>Telefon: +21866745</p>
-      <p>
+      <br />
+      <p><a href="tel:+4521866745">Tlf: +45 21 86 67 45</a></p>
+      <br />
+      <p class="mail">
         <a href="mailto:sokr62006@edu.ucl.dk">Mail: sokr62006@edu.ucl.dk</a>
       </p>
     </section>
 
-    <footer></footer>
+    <div id="footer"></div>
   </body>
 </html>
