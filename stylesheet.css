@@ -468,7 +468,7 @@ Z-index gør at den lægger sig ovenpå */
    .galleri{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
    }
    .galleri div{
     width: auto;
@@ -495,9 +495,7 @@ Z-index gør at den lægger sig ovenpå */
    #footer{
     margin-top: var(--distance);
    }
-
   }
  
-
 
 
